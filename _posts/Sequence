@@ -1,0 +1,66 @@
+---
+layout = post
+title: Sequence
+categories: C# programming
+---
+
+In programming throughout, the computer can only understand 1's and 0's, switches that go on or off, no matter the programming language, it can't realise our intentions when writing the program and thats why we must write it in sequence.
+
+For example if we want to use some if else statements to represent grades in a test, but out of sequence entirely, it'd be:
+```csharp
+
+            if(test>=70)
+            {
+                Console.WriteLine("your final grade is an A");
+            }
+            else if(test<70)
+            {
+                if(test>=60)
+                {
+                    Console.WriteLine("Your final grade is a B");
+                }
+                else if(test>=50)
+                {
+                    Console.WriteLine("Your final grade is a C");
+                }
+                else if(test>=40)
+                {
+                    Console.WriteLine("Your final grade is a D");
+                }
+                else
+                {
+                    Console.WriteLine("No grade bestowed, below grade boundary acceptance");
+                }
+                Console.ReadLine()
+                 Console.WriteLine("Please Input Your Marks In A Test");
+            int test = Convert.ToInt32(Console.ReadLine());
+```
+
+This program wouldn't work because of the sequence we put it in, we defined the variable right at the end of the program in the hopes the computer would understand what we would use it for, but it didn't. The correct version of this would be:
+```csharp
+ Console.WriteLine("Please Input Your Marks In A Test");
+            int test = Convert.ToInt32(Console.ReadLine());
+            if(test>=70)
+            {
+                Console.WriteLine("your final grade is an A");
+            }
+            else if(test<70)
+            {
+                if(test>=60)
+                {
+                    Console.WriteLine("Your final grade is a B");
+                }
+                else if(test>=50)
+                {
+                    Console.WriteLine("Your final grade is a C");
+                }
+                else if(test>=40)
+                {
+                    Console.WriteLine("Your final grade is a D");
+                }
+                else
+                {
+                    Console.WriteLine("No grade bestowed, below grade boundary acceptance");
+                }
+                Console.ReadLine();
+```
