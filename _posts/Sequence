@@ -37,7 +37,7 @@ int test = Convert.ToInt32(Console.ReadLine());
 
 This program wouldn't work because of the sequence we put it in, we defined the variable right at the end of the program in the hopes the computer would understand what we would use it for, but it didn't. The correct version of this would be:
 ```csharp
- Console.WriteLine("Please Input Your Marks In A Test");
+Console.WriteLine("Please Input Your Marks In A Test");
             int test = Convert.ToInt32(Console.ReadLine());
             if(test>=70)
             {
